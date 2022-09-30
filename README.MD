@@ -14,6 +14,7 @@ git init
 git remote add origin https://github.com/UMC-3th-KHU-IT-WIKI/Team-Node.js.git
 ### 3) 브랜치 생성 후 바로 생성한 브랜치로 이동
 git checkout -b <생성하고자 하는 나의 브랜치명> ('< >' 제외)
+- main 에 push 하는건 아닌지 확인 ! (반드시 본인의 branch에 push해야함)
 ### 4) 모든 변경 사항을 다음 commit 에 반영
 git add . (뒤에 .점 까지 찍어야함)
 ### 5) 메시지와 함께 commit 하기
