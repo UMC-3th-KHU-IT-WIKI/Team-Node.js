@@ -22,12 +22,12 @@ git commit -m <commit 내용>
 git push origin 브랜치 이름
 
 
-+ 참고로 다음과 같은 이슈 발생시 마지막 6)번 명령어 실행시 git push origin +브랜치명 처럼 브랜치명 앞에 <h3> + <h3> 붙여보도록.
++ 참고로 다음과 같은 이슈 발생시 마지막 6)번 명령어 실행시 git push origin +브랜치명 처럼 브랜치명 앞에 + 붙여보도록.
 
 <img width="935" alt="스크린샷 2022-10-01 오전 12 16 38" src="https://user-images.githubusercontent.com/76617139/193302169-11ddd56c-13cb-44d5-85a3-dcfa8f9c10a7.png">
 
 https://eunhee-programming.tistory.com/256
-
+https://poew.tistory.com/671
 
 
 
