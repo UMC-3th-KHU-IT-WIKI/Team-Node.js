@@ -1,0 +1,8 @@
+.App{
+    font-family:"ongle";
+}
+
+@font-face {
+    font-family: "ongle";
+    src: url(/src/asset/font/ongle.ttf);
+}

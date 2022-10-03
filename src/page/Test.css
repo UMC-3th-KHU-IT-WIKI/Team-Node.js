@@ -1,0 +1,14 @@
+.button{
+    display: block;
+    background-color: #0A174E;
+    outline: none;
+    border: none;
+    margin:10px;
+    border-radius: 30px;
+    width: 50%;
+    height: 15%;
+    font-size: 20px;
+    font-family:ongle;
+    cursor: pointer;
+    color:#F5D042;
+}
