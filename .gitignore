@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
 .env
 =======
+=======
+>>>>>>> 33b6d30fb5f68d42d944e8e6f059892370a57158
 
 
 # Logs
@@ -134,4 +137,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+<<<<<<< HEAD
+>>>>>>> 33b6d30fb5f68d42d944e8e6f059892370a57158
+=======
 >>>>>>> 33b6d30fb5f68d42d944e8e6f059892370a57158
