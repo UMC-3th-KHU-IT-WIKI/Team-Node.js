@@ -1,6 +1,6 @@
-import { errResponse, response } from "../../../config/response";
+import { errResponse, response } from "../../config/response";
 import regexEmail from "regex-email";
-import baseResponse from "../../../config/baseResponseStatus";
+import baseResponse from "../../config/baseResponseStatus";
 import { createUser, editUser, postSignIn } from "./userService";
 import { retrieveUser, retrieveUserList } from "./userProvider";
 
@@ -35,7 +35,11 @@ export const  postUsers = async (req,res)=>{
     if (!regexEmail.test(email))
         return res.send(response(baseResponse.SIGNIN_EMAIL_ERROR_TYPE));
 
-    // 기타 등등 미션에 따라서 추가하기
+    if (!nickname)
+        return res.send(response(baseResponse.USER_NICKNAME_EMPTY));
+
+    if (!password)
+        return res.send(response(baseResponse.SIGNIN_PASSWORD_EMPTY));
 
     const signUpResponse = await createUser(email, password, nickname);
 
@@ -55,14 +59,14 @@ export const getUsers = async (req,res) =>{
 
     const {query:{email}} = req;
 
-    if(!email){
-        // 유저 전체 조회
-        const userListResult = await retrieveUserList();
-        return res.send(response(baseResponse.SUCCESS, userListResult));
-    }else{
-        const userListbyEmail = await retrieveUserList(email);
-        return res.send(response(baseResponse.SUCCESS, userListbyEmail));
-    }
+    // if(!email){
+    //     // 유저 전체 조회
+    //     const userListResult = await retrieveUserList();
+    //     return res.send(response(baseResponse.SUCCESS, userListResult));
+    // }else{
+    //     const userListbyEmail = await retrieveUserList(email);
+    //     return res.send(response(baseResponse.SUCCESS, userListbyEmail));
+    // }
 }
 
 /**

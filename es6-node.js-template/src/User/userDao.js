@@ -10,21 +10,15 @@ export const selectUser = async (connection) =>{
 
 
 export const selectUserEmail = async (connection, email)=>{
-    const selectUserEmailQuery = `
-        SELECT email, nickname
-        FROM UserInfo
-        WHERE email = ?;
-    `;
+    const selectUserEmailQuery = `SELECT email, nickname FROM User WHERE email = ?;`;
 
     const [emailRows] = await connection.query(selectUserEmailQuery,email);
     return emailRows;
 }
 
 export const insertUserInfo =  async (connection, insertUserInfoParams) =>{
-    const insertUserInfoQuery = `
-    INSERT INTO UserInfo(email, password, nickname)
-    VALUES (?, ?, ?);
-    `;
+    console.log("adsfs");
+    const insertUserInfoQuery = `INSERT INTO User VALUES (?, ?, ?, ?);`;
 
   const insertUserInfoRow = await connection.query(
     insertUserInfoQuery,

@@ -1,7 +1,7 @@
 require("dotenv").config();
-import baseResponse from '../../../config/baseResponseStatus';
-import pool from '../../../config/database'
-import { errResponse } from '../../../config/response';
+import baseResponse from '../../config/baseResponseStatus';
+import pool from '../../config/database'
+import { errResponse } from '../../config/response';
 import { accountCheck, emailCheck, passwordCheck } from './userProvider'
 import crypto from "crypto"
 import { response } from 'express';
@@ -11,21 +11,33 @@ import jwt from "jsonwebtoken"
 
 export const createUser = async (email, password, nickname) =>{
     try{
+
         //이메일 중복 확인
         const emailRows = await emailCheck(email);
         if (emailRows.length > 0)
             return errResponse(baseResponse.SIGNUP_REDUNDANT_EMAIL);
         const hashedPassword = await crypto.createHash("sha512").update(password).digest("hex");
-
-        const insertUserInfoParams = [email, hashedPassword, nickname];
+        
+        const id = Math.floor(Math.random() * 100000 - 1) + 1;
+        const insertUserInfoParams = [id, email, hashedPassword, nickname];
 
         const connection = await pool.getConnection(async conn => conn);
 
+        console.log
+
         const userIdResult = await insertUserInfo(connection,insertUserInfoParams);
-        console.log(`추가된 회원 : ${userIdResult[0].insertId}`);
         connection.release();
-        return response(baseResponse.SUCCESS);
+
+        const result = {
+            status : "성공!",
+            id,
+            email,
+            nickname
+        }
+
+        return JSON.stringify(result);
     }catch (err){
+        console.log(err);
         return errResponse(baseResponse.DB_ERROR);
     }
 }

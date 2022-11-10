@@ -1,0 +1,9 @@
+extends template/layout.pug
+
+block content 
+    div 
+        form(method="POST" action="/users")
+            input(name="email" placeholder="your email" type="email" required)
+            input(name="nickname" placeholder="nickname" required)
+            input(name="password" placeholder="password" type="password" required)
+            input(type="submit" value="join now!")

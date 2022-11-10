@@ -1,4 +1,4 @@
-import pool from "../../../config/database"
+import pool from "../../config/database"
 import { selectUser, selectUserAccount, selectUserEmail, selectUserId, selectUserPassword } from "./userDao";
 
 
