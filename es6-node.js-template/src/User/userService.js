@@ -23,8 +23,6 @@ export const createUser = async (email, password, nickname) =>{
 
         const connection = await pool.getConnection(async conn => conn);
 
-        console.log
-
         const userIdResult = await insertUserInfo(connection,insertUserInfoParams);
         connection.release();
 

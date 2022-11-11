@@ -11,7 +11,7 @@ userRouter.route('/').get(getUsers).post(postUsers);
 
 userRouter.post('/login', login);
 
-userRouter.route('/:userId').get(getUserById).patch(jwtMiddleware, patchUsers);
+userRouter.route('/:id').get(getUserById).patch(jwtMiddleware, patchUsers);
 
 
 

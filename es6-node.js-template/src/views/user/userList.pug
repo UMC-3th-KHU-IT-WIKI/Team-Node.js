@@ -1,0 +1,8 @@
+extends ../template/layout.pug
+include ../mixin/users.pug
+block content 
+    div
+        each user in users
+            +users(user)
+        else 
+            span no user found

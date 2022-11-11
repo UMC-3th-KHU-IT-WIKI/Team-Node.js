@@ -1,10 +1,8 @@
 
 export const selectUser = async (connection) =>{
-    const selectUserListQuery = `
-        SELECT email, nickname 
-        FROM UserInfo;
-    `
+    const selectUserListQuery = `SELECT id, email, nickname FROM User;`
     const [userRows] = await connection.query(selectUserListQuery);
+
     return userRows;
 }
 
@@ -29,11 +27,7 @@ export const insertUserInfo =  async (connection, insertUserInfoParams) =>{
 }
 
 export const selectUserId = async(connection, userId)=>{
-    const selectUserIdQuery = `
-        SELECT id, email, nickname 
-        FROM UserInfo 
-        WHERE id = ?;
-    `;
+    const selectUserIdQuery = `SELECT id, email, nickname FROM User WHERE id = ?;`;
     const [userRow] = await connection.query(selectUserIdQuery, userId);
     return userRow;
 }
@@ -71,3 +65,10 @@ export const updateUserInfo = async() =>{
     const updateUserRow = await connection.query(updateUserQuery, [nickname, id]);
     return updateUserRow[0];
 }
+
+export const selectUserByNickname = async(connection,author) =>{
+    const selectUserNicknameQuery = `SELECT id FROM USER WHERE nickname = '${author}';`;
+    const [[{id}]] = await connection.query(selectUserNicknameQuery);
+    return id;
+}
+

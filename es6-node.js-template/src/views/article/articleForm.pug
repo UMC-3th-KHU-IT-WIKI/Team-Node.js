@@ -1,0 +1,8 @@
+extends ../template/layout.pug
+
+block content 
+    form(action="/articles/new-article" method="POST")
+        input(name="title" placeholder="title" required)
+        input(name="description" placeholder="description" required)
+        input(name="author" placeholder="author" required)
+        input(type="submit" value="add new article!")

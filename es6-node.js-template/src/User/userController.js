@@ -58,15 +58,8 @@ export const getUsers = async (req,res) =>{
      */
 
     const {query:{email}} = req;
-
-    // if(!email){
-    //     // 유저 전체 조회
-    //     const userListResult = await retrieveUserList();
-    //     return res.send(response(baseResponse.SUCCESS, userListResult));
-    // }else{
-    //     const userListbyEmail = await retrieveUserList(email);
-    //     return res.send(response(baseResponse.SUCCESS, userListbyEmail));
-    // }
+    const userListbyEmail = await retrieveUserList(email);
+    res.render("user/userList.pug",{users:userListbyEmail});
 }
 
 /**
@@ -81,12 +74,12 @@ export const getUserById = async(req,res) =>{
      * Path Variable: userId
      */
 
-    const {params:{userId}} = req;
+    const {params:{id}} = req;
 
-    if (userId)
+    if (!id)
         return res.send(errResponse(baseResponse.USER_USERID_EMPTY));
     
-    const userByUserId = await retrieveUser(userId);
+    const userByUserId = await retrieveUser(id);
     return res.send(response(baseResponse.SUCCESS,userByUserId));
 }
 

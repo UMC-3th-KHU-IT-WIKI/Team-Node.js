@@ -29,6 +29,11 @@ const baseResponse = {
     USER_ID_NOT_MATCH : { "isSuccess": false, "code": 2016, "message": "유저 아이디 값을 확인해주세요" },
     USER_NICKNAME_EMPTY : { "isSuccess": false, "code": 2017, "message": "변경할 닉네임 값을 입력해주세요" },
 
+    ARTICLE_TITLE_EMPTY : {"isSuccess" : false, "code" : 2018, "message":"게시글 제목을 입력해주세요"},
+    ARTICLE_DESCRIPTION_EMPTY : {"isSuccess" : false, "code" : 2019, "message":"게시글 내용을 입력해주세요"},
+    ARTICLE_AUTHOR_EMPTY : {"isSuccess" : false, "code" : 2020, "message":"게시글 저자를 입력해주세요"},
+
+
     USER_STATUS_EMPTY : { "isSuccess": false, "code": 2018, "message": "회원 상태값을 입력해주세요" },
 
     // Response error

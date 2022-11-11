@@ -1,0 +1,8 @@
+extends ../template/layout.pug
+include ../mixin/article.pug
+block content 
+    div
+        each article in articles
+            +articles(article)
+        else 
+            span no article found
