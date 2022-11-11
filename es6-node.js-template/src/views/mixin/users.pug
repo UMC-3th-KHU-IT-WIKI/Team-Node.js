@@ -1,0 +1,6 @@
+mixin users(user)
+    div
+        a(href=`/users/${user.id}`)=user.nickname
+        div 
+            span 이메일 : #{user.email}
+    hr
