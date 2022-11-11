@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Update</title>
+  </head>
+  <body>
+    <form action="/update/<%= users[0].name %>" method="POST">
+      name <input type="text" name="name" value="<%= users[0].name%>" /><br />
+      content
+      <input type="text" name="content" value="<%= users[0].content%>" /><br />
+      <button type="submit">Update info</button>
+    </form>
+  </body>
+</html>
