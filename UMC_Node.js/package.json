@@ -1,0 +1,42 @@
+{
+  "name": "es6-server-node-template",
+  "version": "1.0.0",
+  "description": "Node.js API Server by UMC 3rd ddol",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bik1111/UMC_Node.js.git"
+  },
+  "author": "CHOI YONG WOOK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bik1111/UMC_Node.js"
+  },
+  "homepage": "https://github.com/bik1111/UMC_Node.js#readme",
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/node": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "method": "^2.0.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "regex-email": "^1.0.2"
+  },
+  "keywords": []
+}

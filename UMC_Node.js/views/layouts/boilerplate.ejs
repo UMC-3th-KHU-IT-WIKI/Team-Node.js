@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YelpCamp</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+  </head>
+  <!-- d-flex: display flex, flex-column: body의 방향성이 세로로 길게 향하게 그래야 footer가 하단에 깔림 -->
+  <!-- bootstrap 을 활용중이므로 css 설정 가능.-->
+  <!-- body가 flexbox이어서 상단부터 하단까지 위치한 열이다.
+     line에는 가로축을 따라 움직이는 self가 있어 모든게 가로축상에 놓여짐. 또 item이라는것도 있어 모든게 왼쪽에서 오른쪽으로
+     정렬됨. 따라서 justify-content 사용시 모든 항목들에게 영향을 끼치게됨. 그러나
+     footer 처럼 메인항목 하나만 움직이게 만들어주고 싶은거기 때문에
+    상단여백(mt-auto), 좌측여백(ml-auto)를 사용.-->
+  <body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar')%>
+    <main class="container mt-5"></main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/javascripts/validateForms.js"></script>
+  </body>
+</html>
