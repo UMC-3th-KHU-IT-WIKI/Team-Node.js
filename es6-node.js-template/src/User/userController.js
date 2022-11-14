@@ -57,9 +57,8 @@ export const getUsers = async (req,res) =>{
      * Query String: email
      */
 
-    const {query:{email}} = req;
-    const userListbyEmail = await retrieveUserList(email);
-    res.render("user/userList.pug",{users:userListbyEmail});
+    const userListbyEmail = await retrieveUserList();
+        res.render("user/userList.pug",{users:userListbyEmail});
 }
 
 /**

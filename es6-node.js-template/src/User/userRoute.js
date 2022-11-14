@@ -1,5 +1,4 @@
 import express from "express"
-import app from "../../config/express";
 import { jwtMiddleware } from "../../config/jwtMiddleware";
 import { getTest, getUserById, getUsers, login, patchUsers, postUsers } from "./userController";
 

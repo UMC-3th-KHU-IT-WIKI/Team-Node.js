@@ -15,7 +15,6 @@ export const selectUserEmail = async (connection, email)=>{
 }
 
 export const insertUserInfo =  async (connection, insertUserInfoParams) =>{
-    console.log("adsfs");
     const insertUserInfoQuery = `INSERT INTO User VALUES (?, ?, ?, ?);`;
 
   const insertUserInfoRow = await connection.query(
