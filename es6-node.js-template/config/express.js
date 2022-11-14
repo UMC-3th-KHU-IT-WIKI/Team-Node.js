@@ -4,7 +4,6 @@ import methodOverride from "method-override"
 import cors from "cors"
 import userRouter from "../src/User/userRoute";
 import rootRouter from "../src/Root/rootRoute";
-import pug from "pug"
 import articleRouter from "../src/Article/articleRoute";
 
 const app = express();

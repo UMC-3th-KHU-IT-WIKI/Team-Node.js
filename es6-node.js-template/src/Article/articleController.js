@@ -1,7 +1,6 @@
-import { response } from "express";
 import baseResponse from "../../config/baseResponseStatus";
-import { errResponse } from "../../config/response";
-import { createArticle, retrieveArticleList } from "./articleService";
+import { errResponse  ,response} from "../../config/response";
+import { createArticle, retrieveArticle, retrieveArticleList } from "./articleService";
 
 export const getNewArticle = (req,res) =>{
     res.render("article/articleForm.pug");
@@ -11,7 +10,6 @@ export const postNewArticle = async(req,res) =>{
     try
     {
         const {body:{title, description, author}} = req;
-
         if (!title)
             res.send(response(baseResponse.ARTICLE_TITLE_EMPTY));
         else if (!description)
@@ -50,6 +48,21 @@ export const getArticleList = async(req,res)=>{
 export const getArticle = async(req,res) =>{
     try{
         const{params:{id}} = req;
+        if (!id)
+            return res.send(response(baseResponse.ARTICLE_ID_EMPTY));
+        const articleResult = await retrieveArticle(id);
+        const ans = response(baseResponse.SUCCESS,articleResult);
+        res.send(ans);
+    }catch(err){
+        console.log(err);
+        return errResponse(baseResponse.DB_ERROR);
+    }
+}
+
+export const updateArticle = async(req, res)=>{
+    try{
+        const {title, description} = req;
+        console.log(title,description);
     }catch(err){
         console.log(err);
         return errResponse(baseResponse.DB_ERROR);

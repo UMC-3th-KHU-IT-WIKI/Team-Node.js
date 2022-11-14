@@ -26,14 +26,21 @@ export const createUser = async (email, password, nickname) =>{
         const userIdResult = await insertUserInfo(connection,insertUserInfoParams);
         connection.release();
 
-        const result = {
+        let result = null;
+        if (userIdResult){
+        result = {
             status : "성공!",
             id,
             email,
             nickname
         }
-
-        return JSON.stringify(result);
+        }
+        else{
+            result = {
+                status: "실패"
+            }
+        }
+    return JSON.stringify(result);
     }catch (err){
         console.log(err);
         return errResponse(baseResponse.DB_ERROR);
