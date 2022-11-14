@@ -32,9 +32,9 @@ const baseResponse = {
     ARTICLE_TITLE_EMPTY : {"isSuccess" : false, "code" : 2018, "message":"게시글 제목을 입력해주세요"},
     ARTICLE_DESCRIPTION_EMPTY : {"isSuccess" : false, "code" : 2019, "message":"게시글 내용을 입력해주세요"},
     ARTICLE_AUTHOR_EMPTY : {"isSuccess" : false, "code" : 2020, "message":"게시글 저자를 입력해주세요"},
+    ARTICLE_ID_EMPTY : {"isSuccess" : false, "code" : 2021, "message":"게시글을 특정할 수 없습니다."},
 
-
-    USER_STATUS_EMPTY : { "isSuccess": false, "code": 2018, "message": "회원 상태값을 입력해주세요" },
+    USER_STATUS_EMPTY : { "isSuccess": false, "code": 2022, "message": "회원 상태값을 입력해주세요" },
 
     // Response error
     SIGNUP_REDUNDANT_EMAIL : { "isSuccess": false, "code": 3001, "message":"중복된 이메일입니다." },

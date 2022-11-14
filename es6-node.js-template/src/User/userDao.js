@@ -67,8 +67,8 @@ export const updateUserInfo = async() =>{
 }
 
 export const selectUserByNickname = async(connection,author) =>{
-    const selectUserNicknameQuery = `SELECT id FROM USER WHERE nickname = '${author}';`;
-    const [[{id}]] = await connection.query(selectUserNicknameQuery);
+    const selectUserNicknameQuery = `SELECT id FROM User WHERE nickname = '${author}';`;
+    const [[{id}]]= await connection.query(selectUserNicknameQuery);
     return id;
 }
 

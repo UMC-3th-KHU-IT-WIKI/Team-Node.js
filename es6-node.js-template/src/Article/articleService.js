@@ -1,6 +1,6 @@
 import pool from "../../config/database"
 import {selectUserByNickname } from "../User/userDao"
-import { insertArticle, selectArticles } from "./articleDao";
+import { insertArticle, selectArticle, selectArticles } from "./articleDao";
 
 
 export const createArticle = async(title, description, author)=>{
@@ -20,5 +20,11 @@ export const retrieveArticleList = async() =>{
 
     const connection = await pool.getConnection(async conn => conn);
     const result = await selectArticles(connection);
+    return result;
+}
+
+export const retrieveArticle = async(id)=>{
+    const conn = await pool.getConnection(async conn => conn)
+    const result = await selectArticle(conn, id);
     return result;
 }
