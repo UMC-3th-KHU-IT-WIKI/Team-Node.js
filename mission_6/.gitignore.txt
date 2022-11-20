@@ -1,0 +1,92 @@
+node_modules/
+node_modules/.bin/babel
+node_modules/.bin/babel-external-helpers
+node_modules/.bin/babel-external-helpers.cmd
+node_modules/.bin/babel-external-helpers.ps1
+node_modules/.bin/babel-node
+node_modules/.bin/babel-node.cmd
+node_modules/.bin/babel-node.ps1
+node_modules/.bin/babel.cmd
+node_modules/.bin/babel.ps1
+node_modules/.bin/browserslist
+node_modules/.bin/browserslist-lint
+node_modules/.bin/browserslist-lint.cmd
+    node_modules/.bin/browserslist-lint.ps1
+    node_modules/.bin/browserslist.cmd
+    node_modules/.bin/browserslist.ps1
+    node_modules/.bin/ejs
+    node_modules/.bin/ejs.cmd
+    node_modules/.bin/ejs.ps1
+    node_modules/.bin/jake
+    node_modules/.bin/jake.cmd
+    node_modules/.bin/jake.ps1
+    node_modules/.bin/jsesc
+    node_modules/.bin/jsesc.cmd
+    node_modules/.bin/jsesc.ps1
+    node_modules/.bin/json5
+    node_modules/.bin/json5.cmd
+    node_modules/.bin/json5.ps1
+    node_modules/.bin/mime
+    node_modules/.bin/mime.cmd
+    node_modules/.bin/mime.ps1
+    node_modules/.bin/parser
+    node_modules/.bin/parser.cmd
+    node_modules/.bin/parser.ps1
+    node_modules/.bin/regjsparser
+    node_modules/.bin/regjsparser.cmd
+    node_modules/.bin/regjsparser.ps1
+    node_modules/.bin/resolve
+    node_modules/.bin/resolve.cmd
+    node_modules/.bin/resolve.ps1
+    node_modules/.bin/semver
+    node_modules/.bin/semver.cmd
+    node_modules/.bin/semver.ps1
+    node_modules/.cache/@babel/register/.babel.7.20.2.development.json
+    node_modules/.package-lock.json
+    node_modules/@ampproject/remapping/LICENSE
+    node_modules/@ampproject/remapping/README.md
+    node_modules/@ampproject/remapping/dist/remapping.mjs
+    node_modules/@ampproject/remapping/dist/remapping.mjs.map
+    node_modules/@ampproject/remapping/dist/remapping.umd.js
+    node_modules/@ampproject/remapping/dist/remapping.umd.js.map
+    node_modules/@ampproject/remapping/dist/types/build-source-map-tree.d.ts
+    node_modules/@ampproject/remapping/dist/types/remapping.d.ts
+    node_modules/@ampproject/remapping/dist/types/source-map-tree.d.ts
+    node_modules/@ampproject/remapping/dist/types/source-map.d.ts
+    node_modules/@ampproject/remapping/dist/types/types.d.ts
+    node_modules/@ampproject/remapping/package.json
+    node_modules/@babel/cli/LICENSE
+    node_modules/@babel/cli/README.md
+    node_modules/@babel/cli/bin/babel-external-helpers.js
+    node_modules/@babel/cli/bin/babel.js
+    node_modules/@babel/cli/index.js
+    node_modules/@babel/cli/lib/babel-external-helpers.js
+    node_modules/@babel/cli/lib/babel-external-helpers.js.map
+    node_modules/@babel/cli/lib/babel/dir.js
+    node_modules/@babel/cli/lib/babel/dir.js.map
+    node_modules/@babel/cli/lib/babel/file.js
+    node_modules/@babel/cli/lib/babel/file.js.map
+    node_modules/@babel/cli/lib/babel/index.js
+    node_modules/@babel/cli/lib/babel/index.js.map
+    node_modules/@babel/cli/lib/babel/options.js
+    node_modules/@babel/cli/lib/babel/options.js.map
+    node_modules/@babel/cli/lib/babel/util.js
+    node_modules/@babel/cli/lib/babel/util.js.map
+    node_modules/@babel/cli/lib/babel/watcher.js
+    node_modules/@babel/cli/lib/babel/watcher.js.map
+    node_modules/@babel/cli/package.json
+    node_modules/@babel/code-frame/LICENSE
+    node_modules/@babel/code-frame/README.md
+    node_modules/@babel/code-frame/lib/index.js
+    node_modules/@babel/code-frame/package.json
+    node_modules/@babel/compat-data/LICENSE
+    node_modules/@babel/compat-data/README.md
+    node_modules/@babel/compat-data/corejs2-built-ins.js
+    node_modules/@babel/compat-data/corejs3-shipped-proposals.js
+    node_modules/@babel/compat-data/data/corejs2-built-ins.json
+    node_modules/@babel/compat-data/data/corejs3-shipped-proposals.json
+    node_modules/@babel/compat-data/data/native-modules.json
+    node_modules/@babel/compat-data/data/overlapping-plugins.json
+    node_modules/@babel/compat-data/data/plugin-bugfixes.json
+    node_modules/@babel/compat-data/data/plugins.json
+    node_modules/@babel/compat
